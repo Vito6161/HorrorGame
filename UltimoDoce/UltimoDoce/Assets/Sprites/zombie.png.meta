@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c78aaeaf497064a4997ebe01e92c4eb0
+guid: 3cae573da6c90c14785856bde6029800
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8973853105474328663
-    second: Parede Tile_0
+      213: -5782521184205631276
+    second: zombie_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -74,8 +74,8 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 2
+    textureFormat: 4
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Parede Tile_0
+      name: zombie_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 128
-        height: 64
+        x: 30
+        y: 10
+        width: 48
+        height: 67
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9a7aaa56528767380800000000000000
-      internalID: -8973853105474328663
+      spriteID: 4d0904dbe9b50cfa0800000000000000
+      internalID: -5782521184205631276
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Parede Tile_0: -8973853105474328663
+      zombie_0: -5782521184205631276
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
