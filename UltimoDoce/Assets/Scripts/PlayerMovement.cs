@@ -16,7 +16,8 @@ public class PlayerMovement : MonoBehaviour
 
     public int direção = 1;
 
-
+    public bool isPaused = false;
+    [SerializeField] private GameObject pauseUI;
 
 
     void Start()
@@ -29,14 +30,27 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontal = Input.GetAxisRaw("Horizontal");
 
-        if(horizontal > 0.1f && direção < 0 || horizontal < -0.1f && direção > 0)
+        if((horizontal > 0.1f && direção < 0 || horizontal < -0.1f && direção > 0) && !isPaused)
         {
             Virar();
         }
         
-        if(Input.GetButtonDown("Jump") && IsGrounded())
+        if(Input.GetButtonDown("Jump") && IsGrounded() && !isPaused)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, pulo);
+        }
+
+        if(Input.GetKeyDown(KeyCode.Tab) && !isPaused)
+        {
+            Time.timeScale = 0f;
+            isPaused = true;
+            pauseUI.SetActive(true);
+        }
+        else if(Input.GetKeyDown(KeyCode.Tab) && isPaused)
+        {
+            Time.timeScale = 1f;
+            isPaused = false;
+            pauseUI.SetActive(false);
         }
     }
 

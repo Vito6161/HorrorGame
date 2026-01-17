@@ -41,12 +41,12 @@ public class Dano : MonoBehaviour
         }
 
 
-        if(Input.GetKeyDown(KeyCode.X) && Time.time >= proximoAtaque && isMelee)
+        if(Input.GetKeyDown(KeyCode.X) && Time.time >= proximoAtaque && isMelee && !move.isPaused)
         {
             proximoAtaque = Time.time + cooldown;
             Melee();
         }
-        else if (Input.GetKeyDown(KeyCode.X) && Time.time >= proximoAtaque && !isMelee)
+        else if (Input.GetKeyDown(KeyCode.X) && Time.time >= proximoAtaque && !isMelee && !move.isPaused)
         {
             proximoAtaque = Time.time + cooldown;
             Atirar();
