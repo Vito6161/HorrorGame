@@ -30,6 +30,8 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontal = Input.GetAxisRaw("Horizontal");
 
+        rb.sleepMode = RigidbodySleepMode2D.NeverSleep;
+
         if((horizontal > 0.1f && direção < 0 || horizontal < -0.1f && direção > 0) && !isPaused)
         {
             Virar();

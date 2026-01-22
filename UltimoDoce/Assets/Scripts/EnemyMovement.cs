@@ -57,14 +57,14 @@ public class EnemyMovement : MonoBehaviour
 
         if(!ponto1)
         {
-            Debug.Log("indo pro ponto 1");
+            
             transform.position = Vector2.MoveTowards(transform.position, patrulha1.position, velocidade * Time.deltaTime);
             Virar(patrulha1.position.x);
 
             
             if(transform.position == patrulha1.position)
             {
-                Debug.Log("chegou no ponto 1");
+                
                 ponto1 = true;
                 return;
             }
@@ -72,13 +72,13 @@ public class EnemyMovement : MonoBehaviour
 
         if(ponto1)
         {
-            Debug.Log("indo pro ponto 2");
+           
             transform.position = Vector2.MoveTowards(transform.position, patrulha2.position, velocidade * Time.deltaTime);
             Virar(patrulha2.position.x);
 
             if(transform.position == patrulha2.position)
             {
-                Debug.Log("chegou no ponto 2");
+                
                 ponto1 = false;
                 return;
             }
@@ -88,7 +88,7 @@ public class EnemyMovement : MonoBehaviour
 
     void Perseguir()
     {
-        Debug.Log("perseguindo");
+        
         
 
         if(voa)

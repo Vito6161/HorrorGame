@@ -6,7 +6,6 @@ public class TriggerArea : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("entrou na area");
         if(other.gameObject.CompareTag("Player"))
         {
             naArea = true;
@@ -15,7 +14,6 @@ public class TriggerArea : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D other)
     {
-        Debug.Log("saiu da area");
         if(other.gameObject.CompareTag("Player"))
         {
             naArea = false;
